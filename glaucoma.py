@@ -24,6 +24,15 @@ def predict_glaucoma(patient_data: pd.DataFrame):
     Returns:
         The predicted diagnosis ('Glaucoma' or 'No Glaucoma').
     """
+    # Add debugging prints
+    print("--- Debugging predict_glaucoma ---")
+    print("Input patient_data columns:", patient_data.columns.tolist())
+    print("Input patient_data dtypes:\n", patient_data.dtypes)
+    # You can also print a sample of the data if needed
+    # print("Input patient_data head:\n", patient_data.head())
+    print("----------------------------------")
+
+
     # Preprocess the new data using the loaded, fitted preprocessor
     try:
         processed_data = loaded_preprocessor.transform(patient_data)
